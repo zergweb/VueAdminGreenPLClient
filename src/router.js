@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-
+import Home from './Pages/Admin/Home.vue'
+import Login from './Pages/Login.vue'
+import NotF from './Pages/404.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -12,14 +13,21 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
-    },
+	  },
+	 {
+		  path: '/login',
+		  name: 'login',
+		  component: Login
+	  },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
+      component: () => import(/* webpackChunkName: "about" */ './Pages/Admin/About.vue')
+	  },
+	  {
+		  path: '*',
+		  name: '404',
+		  component:NotF
+	  }
   ]
 })

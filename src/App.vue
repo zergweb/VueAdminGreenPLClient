@@ -1,24 +1,15 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <div>
-      <p>
-       
-        xfgbhcxvgnbcvbnvdnbdvb
-      </p>
-      <el-button>el-button</el-button>
-    </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <router-view></router-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+    import HelloWorld from './components/HelloWorld.vue';
+    import LoginPage from './Pages/Login.vue';
 export default {
   name: 'app',
   components: {
-    HelloWorld
+      HelloWorld,
+      LoginPage
   }
 }
 </script>
