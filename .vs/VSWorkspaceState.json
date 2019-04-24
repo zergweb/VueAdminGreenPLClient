@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\components"
+    "\\src\\axios",
+    "\\src\\components",
+    "\\src\\Pages",
+    "\\src\\Pages\\Admin"
   ],
-  "SelectedNode": "\\src\\components\\HelloWorld.vue",
+  "SelectedNode": "\\src\\components\\TopNavBar.vue",
   "PreviewInSolutionExplorer": false
 }

@@ -1,19 +1,18 @@
 <template>
-  <div class="home">
-      <h1>Home</h1>
-      <el-button type="primary" plain>Primary</el-button>
-
-  </div>
+    <div>
+        <h1>main</h1>
+    </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+    import HelloWorld from '@/components/HelloWorld.vue';
+    import TopNavBar from '../../components/TopNavBar.vue';
 export default {
   name: 'home',
   components: {
-    HelloWorld
+      HelloWorld,
+      TopNavBar
   }
 }
 </script>
