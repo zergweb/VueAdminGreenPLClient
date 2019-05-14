@@ -1,23 +1,17 @@
 <template>
-    <el-container style="height:100%;border: 1px solid #eee">
-        <NavSidebar v-if="isAuth"></NavSidebar>
 
-        <el-container>
-            <TopNavBar v-if="isAuth"></TopNavBar>
-            <router-view></router-view>
-        </el-container>           
-     </el-container>
+    <router-view></router-view>
 </template>
 
 <script>
-    import NavSidebar from './components/NavSidebar.vue';
-    import TopNavBar from './components/TopNavBar.vue';
+   // import NavSidebar from './components/NavSidebar.vue';
+   // import TopNavBar from './components/TopNavBar.vue';
     import HTTP from './axios/http';
 export default {
   name: 'app',
      components: {
-          TopNavBar,
-          NavSidebar
+          //TopNavBar,
+        //  NavSidebar
      },
     computed: {
             isAuth: function () {
@@ -28,6 +22,15 @@ export default {
 </script>
 
 <style>
+html{
+    height:100%;
+}
+    body {
+        min-height: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        background-color: #ececec;
+    }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,5 +1,5 @@
 <template>
-    <el-container class="cont">
+    <el-card class="cont">
         <el-form ref="form" class="form">
             <el-form-item label="login" :label-position="'top'">
                 <el-input v-model="userlogin"></el-input>
@@ -11,7 +11,7 @@
                 <el-button v-on:click="login()" type="primary">Login</el-button>
             </el-form-item>
         </el-form>
-    </el-container>
+    </el-card>
 </template>
 
 
@@ -32,7 +32,7 @@ export default {
                 let login = this.userlogin
                 let password = this.password
                 this.$store.dispatch('login', { login, password })
-                    .then(() => this.$router.push('/'))
+                    .then(() => this.$router.push('/admin/'))
                     .catch(err => console.log(err))
             }
         }
@@ -51,7 +51,5 @@ export default {
         transition: .2s;
         padding:20px;
     }
-.cont:hover {
-    box-shadow: 0 0 8px 0 rgba(232,237,250,.6), 0 2px 4px 0 rgba(232,237,250,.5);
-}
+
 </style>
